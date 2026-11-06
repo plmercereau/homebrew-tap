@@ -4,7 +4,7 @@
 class Wrekin < Formula
   desc "Teleport a Claude Code Cloud session onto one of your own machines, from Claude"
   homepage "https://wrekin.platyplus.io"
-  version "0.2.5"
+  version "0.3.0"
   license "MIT"
 
   livecheck do
@@ -14,23 +14,23 @@ class Wrekin < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.5/wrekin_0.2.5_darwin_arm64.tar.gz"
-      sha256 "94a061043b277b484f7dc23623ea8e197ba64fabd450e455a9ef233b09b0d2fb"
+      url "https://github.com/plmercereau/wrekin/releases/download/v0.3.0/wrekin_0.3.0_darwin_arm64.tar.gz"
+      sha256 "11cec6145bfc58f88edf61b23031cd9308b33879b6cb543fadb81420c2a5c983"
     end
     on_intel do
-      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.5/wrekin_0.2.5_darwin_amd64.tar.gz"
-      sha256 "41158d2c9f579ac81c53fd1f7d2051d36335cd4dc7381b29a1c2c11ccf9c663a"
+      url "https://github.com/plmercereau/wrekin/releases/download/v0.3.0/wrekin_0.3.0_darwin_amd64.tar.gz"
+      sha256 "1dc94f6b203b105484e79ceeba8f784a1a69c6c4223eb833303b91ad711de124"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.5/wrekin_0.2.5_linux_arm64.tar.gz"
-      sha256 "f2184c74ff1f7e5c31a200dd665466daaeaa35a6545434b999af8b74748ac3bf"
+      url "https://github.com/plmercereau/wrekin/releases/download/v0.3.0/wrekin_0.3.0_linux_arm64.tar.gz"
+      sha256 "b2476c5a0d6ec7e759a8a7551435da466c6d8c2a75b5f9af9d2bb5b89925b17c"
     end
     on_intel do
-      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.5/wrekin_0.2.5_linux_amd64.tar.gz"
-      sha256 "2ed884a39175e3f7212ce6fcf445969b4d35a6fc57965185811e58b49c9418f3"
+      url "https://github.com/plmercereau/wrekin/releases/download/v0.3.0/wrekin_0.3.0_linux_amd64.tar.gz"
+      sha256 "af2eeceacba4be56cc9780f4873de0ed3c17a9abbdeb2ef2208aeec5ee69f331"
     end
   end
 
@@ -45,6 +45,8 @@ class Wrekin < Formula
 
   def install
     bin.install "wrekin"
+    # bash, zsh and fish completions, from cobra's `wrekin completion <shell>`.
+    generate_completions_from_executable(bin/"wrekin", "completion")
   end
 
   def caveats
