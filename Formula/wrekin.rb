@@ -4,7 +4,7 @@
 class Wrekin < Formula
   desc "Teleport a Claude Code Cloud session onto one of your own machines, from Claude"
   homepage "https://wrekin.platyplus.io"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   livecheck do
@@ -14,23 +14,23 @@ class Wrekin < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.1/wrekin_0.2.1_darwin_arm64.tar.gz"
-      sha256 "3e34eaeb1d9ca4d083f6c33d322fde7f60ce0cbfefb48424e207332070a11b5f"
+      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.2/wrekin_0.2.2_darwin_arm64.tar.gz"
+      sha256 "e82e90fbcdc979bea6093c5cc71c741a6210ee7017c01ae5945856c91398f441"
     end
     on_intel do
-      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.1/wrekin_0.2.1_darwin_amd64.tar.gz"
-      sha256 "501e4463e6c641edf12a571203eb1ddcdf725ee090a6a120e86b7389e990ddfc"
+      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.2/wrekin_0.2.2_darwin_amd64.tar.gz"
+      sha256 "477dac1cf114715ab692f2822a836242fd4e41f7373121506c1b8bdc3b20bf90"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.1/wrekin_0.2.1_linux_arm64.tar.gz"
-      sha256 "48cdd056751729bb1f8f77754c7c14c434c8a738c3e2c9f0af4551a343f4ab7b"
+      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.2/wrekin_0.2.2_linux_arm64.tar.gz"
+      sha256 "e9f7f775672532480acfe15f603a1d66eeaf5deff3885feaeebb03b05a3432bd"
     end
     on_intel do
-      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.1/wrekin_0.2.1_linux_amd64.tar.gz"
-      sha256 "fba992c2f39e24b5a2cfc6d61133f260dee8ba43bc189dd3fbcdad28c1a0e06e"
+      url "https://github.com/plmercereau/wrekin/releases/download/v0.2.2/wrekin_0.2.2_linux_amd64.tar.gz"
+      sha256 "76ef917b7ea76355a8430613da136c6e21647579d86d6b32b8b52fe4267dbaab"
     end
   end
 
